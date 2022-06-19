@@ -1,4 +1,5 @@
 import 'package:crypto_ticker/model/crypto_data.dart';
+import 'package:crypto_ticker/services/restApi.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
@@ -100,9 +101,17 @@ class _PriceScreenState extends State<PriceScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('🤑 Crypto Ticker'),
+        title: const Text('Crypto Ticker'),
+        centerTitle: true,
       ),
-      body: Column(
+      body: 
+
+      isWaiting ? 
+      const Center(
+        child: CircularProgressIndicator(color: Colors.black,),
+      ) :
+      
+      Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
