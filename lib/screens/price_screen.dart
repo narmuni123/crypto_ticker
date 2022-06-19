@@ -104,14 +104,7 @@ class _PriceScreenState extends State<PriceScreen> {
         title: const Text('Crypto Ticker'),
         centerTitle: true,
       ),
-      body: 
-
-      isWaiting ? 
-      const Center(
-        child: CircularProgressIndicator(color: Colors.black,),
-      ) :
-      
-      Column(
+      body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
