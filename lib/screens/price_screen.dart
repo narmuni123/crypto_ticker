@@ -12,7 +12,7 @@ class PriceScreen extends StatefulWidget {
 }
 
 class _PriceScreenState extends State<PriceScreen> {
-  String selectedCurrency = 'AUD';
+  String selectedCurrency = 'INR';
 
   DropdownButton<String> androidDropdown() {
     List<DropdownMenuItem<String>> dropdownItems = [];
@@ -86,7 +86,7 @@ class _PriceScreenState extends State<PriceScreen> {
         CryptoCard(
           cryptoCurrency: crypto,
           selectedCurrency: selectedCurrency,
-          value: isWaiting ? '?' : coinValues[crypto]!,
+          value: isWaiting ? 'loading...' : coinValues[crypto]!,
         ),
       );
     }
